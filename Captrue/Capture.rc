@@ -1,0 +1,300 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Capture.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Capture.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Capture"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Capture，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_CAPTURE_DIALOG DIALOGEX 0, 0, 287, 264
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Capture"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,184,234,40,14
+    GROUPBOX        "配置",IDC_STATIC,111,124,86,96
+    CONTROL         "允许客户端连接",IDC_ALLOWCONNECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,165,64,10
+    CONTROL         "允许远程控制",IDC_ALLOWCONTROL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,177,57,10
+    GROUPBOX        "录像",IDC_STATIC,13,46,144,69
+    PUSHBUTTON      "开始录像",IDC_STARTRECORDING,17,87,32,14
+    PUSHBUTTON      "停止录像",IDC_STOPRECORDING,120,87,32,14
+    LTEXT           "每秒帧数：",IDC_STATIC,32,65,35,8
+    CONTROL         "",IDC_FRAMESLIDER,"msctls_trackbar32",TBS_BOTH | TBS_TOOLTIPS | TBS_NOTIFYBEFOREMOVE | WS_TABSTOP,66,60,66,19
+    PUSHBUTTON      "暂停",IDC_SUSPEND,86,87,32,14
+    PUSHBUTTON      "继续",IDC_GONO,51,87,32,14
+    CONTROL         "图像异或",IDC_ISXOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,153,43,10
+    CONTROL         "压缩",IDC_ISCOMPRESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,141,30,10
+    GROUPBOX        "",IDC_STATIC,174,224,106,33
+    PUSHBUTTON      "最少化",IDC_SAMLLEST,228,234,40,14
+    GROUPBOX        "日记",IDC_STATIC,13,124,81,81
+    CONTROL         "记录变化区域",IDC_CHANGES_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,143,57,10
+    CONTROL         "记录重复区域",IDC_REPEAT_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,154,57,10
+    CONTROL         "进行帧统计",IDC_FRAMECOUNT_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,166,49,10
+    GROUPBOX        "文件保存",IDC_STATIC,13,11,260,32
+    LTEXT           "录像保存为：",IDC_STATIC,29,25,42,8
+    EDITTEXT        IDC_FILEPATH,70,23,148,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览...",IDC_FIND_PATH,225,23,37,15
+    GROUPBOX        "录制区域",IDC_STATIC,163,47,110,69
+    LTEXT           "left:",IDC_STATIC,167,84,14,8
+    LTEXT           "top:",IDC_STATIC,167,100,14,8
+    LTEXT           "right:",IDC_STATIC,212,84,18,8
+    LTEXT           "bottom:",IDC_STATIC,212,99,27,8
+    EDITTEXT        IDC_SET_LEFT,182,82,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SET_TOP,182,97,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SET_RIGHT,240,82,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SET_BOTTOM,240,98,29,12,ES_AUTOHSCROLL
+    GROUPBOX        "录像质量",IDC_STATIC,218,123,55,96
+    CONTROL         "",IDC_RECORD_QUALITY,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,232,134,20,55
+    CONTROL         "全屏",IDC_RECORD_FULLSCREEN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,179,63,30,10
+    CONTROL         "指定区域",IDC_SET_RECT,"Button",BS_AUTORADIOBUTTON,215,63,43,10
+    CONTROL         "捕获DirectDraw",IDC_USEDDXCAPTURE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,189,64,10
+    LTEXT           "",IDC_FRAMENUM_STATIC,135,67,8,8
+    CTEXT           "",IDC_SCREENQUALITY_STATIC,232,189,15,8
+    LTEXT           "高",IDC_STATIC,256,140,8,8
+    LTEXT           "中",IDC_STATIC,256,157,8,8
+    LTEXT           "低",IDC_STATIC,256,174,8,8
+    PUSHBUTTON      "高级配置",IDC_MORE_SET,26,218,46,16
+    CONTROL         "预览",IDC_PREVIEW_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,229,205,30,10
+END
+
+IDD_DXPRO_DLG DIALOGEX 0, 0, 344, 156
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DX应用管理"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,273,108,55,22
+    CONTROL         "",IDC_DXPRO_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,11,32,245,117
+    PUSHBUTTON      "删除",IDC_DXDEL,273,78,55,22
+    PUSHBUTTON      "添加",IDC_DXADD,273,46,55,22
+    LTEXT           "DX应用程序列表",IDC_STATIC,92,16,57,10
+END
+
+IDD_MOERSET_DLG DIALOGEX 0, 0, 150, 144
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "高级配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,19,108,50,14
+    PUSHBUTTON      "取消",IDCANCEL,79,108,50,14
+    CONTROL         "同时录制声音",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,27,64,10
+    CONTROL         "允许多用户连接",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,41,72,10
+    CONTROL         "使用硬件加速",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,55,64,10
+    CONTROL         "使用API拦截",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,70,59,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Capture.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "Capture.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_CAPTURE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_DXPRO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_MOERSET_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYMENU MENU 
+BEGIN
+    MENUITEM "开始",                          ID_TRAYSTART
+    MENUITEM "暂停",                          ID_TRATSUSPEND
+    MENUITEM "继续",                          ID_TRAYGONO
+    MENUITEM "停止",                          ID_TRAYSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Capture(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 套接字初始化失败。"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Capture.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
