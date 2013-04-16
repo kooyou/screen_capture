@@ -65,8 +65,8 @@ void CSocketThread::OnCreateConnect(WPARAM wParam, LPARAM lParam)
 	{
 		TRACE(_T("connect server success!"));
 		mv_isConnect=TRUE;
-		int revBuf = 32*1024;
-		setsockopt(*mv_pConnectSocket,SOL_SOCKET,SO_RCVBUF,(char*)&revBuf,sizeof(revBuf));
+		//int revBuf = 50*1024;
+		//mv_pConnectSocket->SetSockOpt(SO_RCVBUF,(char*)&revBuf,sizeof(revBuf));
 		//int on =1;
 		//setsockopt(*mv_pConnectSocket,IPPROTO_TCP,TCP_NODELAY,(char*)&on,sizeof(on));
 
@@ -121,7 +121,7 @@ void CSocketThread::OnPlayer(WPARAM wParam, LPARAM lParam)
 	}
 
 	
-	HandleBuffer(pBuf,bufLen);
+	//HandleBuffer(pBuf,bufLen);
 	delete[] pBuf;
 
 	CPlayerThread::OnPlayer(0,0);//调用父类的方法去除积累的WM_PLAYER消息

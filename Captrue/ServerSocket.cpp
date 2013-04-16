@@ -37,10 +37,10 @@ void CServerSocket::OnAccept(int nErrorCode)
 		//int on =1;
 		//pSocketThread->m_socket.SetSockOpt(TCP_NODELAY,&no,sizeof(no));
 		//setsockopt(pSocketThread->m_socket,IPPROTO_TCP,TCP_NODELAY,(char*)&on,sizeof(on));
-		int sendBuf =32*1024;
-		setsockopt(pSocketThread->m_socket,SOL_SOCKET,SO_SNDBUF,(char*)&sendBuf,sizeof(sendBuf));
-		//int on =1;
-		//setsockopt(pSocketThread->m_socket,IPPROTO_TCP,TCP_NODELAY,(char*)&on,sizeof(on));
+		//int sendBuf =32*1024;
+		//setsockopt(pSocketThread->m_socket,SOL_SOCKET,SO_SNDBUF,(char*)&sendBuf,sizeof(sendBuf));
+		int on =1;
+		pSocketThread->m_socket.SetSockOpt(TCP_NODELAY,(char*)&on,sizeof(int));
 		Accept(pSocketThread->m_socket);
 	}
 	CSocket::OnAccept(nErrorCode);
