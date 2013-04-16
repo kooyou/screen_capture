@@ -47,7 +47,11 @@ END_MESSAGE_MAP()
 // CSocketThread 消息处理程序
 void CSocketThread::OnSendData(WPARAM wParam, LPARAM lParam)
 {
-	lParam = 2048;
+	if(lParam > 2048){
+		theApp.m_log.WriteLog(_T("too long!"));
+		return;
+	}
+	//lParam = 2048;
 	CString str;
 	//str.Format(_T("bufferSize:%d,pos:%d"),bufferSize,mv_file.GetPosition());
 	SYSTEMTIME sysTime;
